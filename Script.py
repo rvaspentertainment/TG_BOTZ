@@ -221,10 +221,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
     CAPTION = """ 
 <b>
-{file_name} filmytak
-┏━━━━━━━⍟
-┃<a href="https://t.me/filmytak">✨ 🅕🅘🅛🅜🅨🅣🅐🅚 ✨</a> 
-┗━━━━━━━━━━━⊛</b>"""
+{file_name} @Rasmalai_collection"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {qurey}
