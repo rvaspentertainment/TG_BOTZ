@@ -56,7 +56,7 @@ async def start(client, message):
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💰', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAJnLmTuFB3tbjsPSKlQYaKfUux_RBtzAAIEAAPBJDExieUdbguzyBAeBA") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -253,7 +253,7 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, Congratulations! Ads token refreshed successfully ✅</b>",
+                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
                 protect_content=True
             )
             await verify_user(client, userid, token)
@@ -304,7 +304,7 @@ async def start(client, message):
     elif data.startswith("all"):
         files = temp.GETALL.get(file_id)
         if not files:
-            return await message.reply('<b><i></b></i>')
+            return await message.reply('<b><i>No such file exist.</b></i>')
         filesarr = []
         for file in files:
             file_id = file.file_id
@@ -352,8 +352,8 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>@Rasmalai_collection<u</u></b>\n\n@Rasmalai_collection</i></b>")
-        await asyncio.sleep(1200)
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>@Rasmalai_collection</b>")
+        await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -418,7 +418,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '@Rasmalai_collection  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '@filmytak  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -428,18 +428,18 @@ async def start(client, message):
                     return
             await msg.edit_caption(f_caption)
             btn = [[
-                InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
+                InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
             k = await msg.reply("<b><u>@Rasmalai_collection",quote=True)
-            await asyncio.sleep(1200)
+            await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
             return
         except:
             pass
-        return await message.reply('')
+        return await message.reply('No such file exist.')
     files = files_[0]
-    title = '@Rasmalai_collection  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '@filmytak  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -449,7 +449,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"@Rasmalai_collection  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"@filmytak  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
@@ -480,10 +480,10 @@ async def start(client, message):
         )
     )
     btn = [[
-        InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
+        InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b><u>@Rasmalai_collection",quote=True)
-    await asyncio.sleep(1200)
+    k = await msg.reply("<b><u>@Rasmalai_collection=True)
+    await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
     return   
