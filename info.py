@@ -21,7 +21,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "5634679884:AAH6KjE4JbS5rD3ljyZSJZJx6I-rbz5
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://telegra.ph/file/ebad2eb29a3d2702e1531.jpg https://telegra.ph/file/5250452a1ab5364cfc4dc.jpg https://telegra.ph/file/68a707b00e8e88ed3c4a4.jpg https://telegra.ph/file/f44b3f7381cbf2e7708bb.jpg https://telegra.ph/file/4aaa6122c1fe3b71cf52c.jpg https://telegra.ph/file/486a9c2e80ed1729a345f.jpg https://telegra.ph/file/b165f958d038b903d43e1.jpg https://telegra.ph/file/989a744a60c061838444f.jpg https://telegra.ph/file/ff8f67820985179067982.jpg https://telegra.ph/file/3d8c714a3b0c04bfdec7e.jpg https://telegra.ph/file/fd0e1a19b0268c005edf8.jpg https://telegra.ph/file/8cfe0b5ceaa7b969448c4.jpg https://telegra.ph/file/5965fb86394de52b45e31.jpg https://telegra.ph/file/b826e4fabf1bf0fa72db3.jpg https://telegra.ph/file/baba127a57d74bc19e956.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://telegra.ph/file/bc177bbb3457868c85aa3.jpg https://telegra.ph/file/31bcbd9ae48f7566624da.jpg https://telegra.ph/file/641932f5fe35bd276b6ff.jpg https://telegra.ph/file/3bcc653651cacce500777.jpg https://telegra.ph/file/97b67895c93051ef264dd.jpg https://telegra.ph/file/ee3e3cd6d96912a92f531.jpg https://telegra.ph/file/9d6bfb83bed9283e4908a.jpg https://telegra.ph/file/481315548212eeaa9e12e.jpg https://telegra.ph/file/abdd58538ccb08461cbe2.jpg https://telegra.ph/file/cbb05309fa06ffd64a3cd.jpg https://telegra.ph/file/7180304fae7f5732d6631.jpg https://telegra.ph/file/86fd1779a91a82f882a5e.jpg https://telegra.ph/file/3318c2462f8ae51ad79f2.jpg https://telegra.ph/file/972eefb91bafb84ac91b3.jpg https://telegra.ph/file/1b83c3011c7ae84bc865a.jpg https://telegra.ph/file/0a3d496739927ac353d7f.jpg https://telegra.ph/file/8a29ef8a3c9d947fbaa95.jpg https://telegra.ph/file/eeb2553ac486bfa77cace.jpg https://telegra.ph/file/141e4b43655d06b3f7e33.jpg https://telegra.ph/file/64114589a16ff319eabed.jpg https://telegra.ph/file/5b7598cc1443502b454f2.jpg https://telegra.ph/file/fa271dab8f70f79cbf112.jpg https://telegra.ph/file/987135da2263d6b226f1e.jpg https://telegra.ph/file/632b324817ab576c929c2.jpg https://telegra.ph/file/cef388cacd543324d5874.jpg https://telegra.ph/file/7758579b2148f6c0c6199.jpg https://telegra.ph/file/6aacae9fcba39c552cc02.jpg https://telegra.ph/file/1e4fd294a3848c5d17be1.jpg https://telegra.ph/file/08e9a3d5f2811787ecee5.jpg https://telegra.ph/file/9eb3280457e7f51004b99.jpg https://telegra.ph/file/97abe4a152180614fca63.jpg https://telegra.ph/file/c2cbcdbc10165b297c8e3.jpg https://telegra.ph/file/b81e96ab4f47b7dbacdc0.jpg https://telegra.ph/file/4e42934a92aa796f27ad9.jpg https://telegra.ph/file/6efb68b9b39b7ccb94625.jpg https://telegra.ph/file/a963fdaf36791446a37b6.jpg https://telegra.ph/file/480a8c459dff1c0dd457b.jpg https://telegra.ph/file/0384f5b7c57a48c102ede.jpg https://telegra.ph/file/e6fa35d1df938e696aee7.jpg https://telegra.ph/file/e234e5bbb10ce55324407.jpg https://telegra.ph/file/8b90be4974ddd29a9be56.jpg https://telegra.ph/file/79f77a7f961527381d0d6.jpg ')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/62efbcc4e7580b76530ba.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155e90e.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/9133dc596eabc73750774.jpg")
@@ -49,20 +49,20 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'paisakamalo.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '16badb4cdfbd26689b88c28d4385b24b5ec85d81')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'a6baa4df0cd98f7ac7dd156ddd4a57422faee12f')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movies_hub_official1')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TG_UPDATES1')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TG_UPDATES1/371')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/filmytak_official')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/filmytak_official')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/filmytak_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Hello Nanbha and Nanbis ❤️')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TG_SUPPORT_GROUP')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'filmytak_official')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
