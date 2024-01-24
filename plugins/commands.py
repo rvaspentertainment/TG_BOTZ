@@ -304,7 +304,7 @@ async def start(client, message):
     elif data.startswith("all"):
         files = temp.GETALL.get(file_id)
         if not files:
-            return await message.reply('<b><i></b></i>')
+            return await message.reply('<b><i>No such file exist.</b></i>')
         filesarr = []
         for file in files:
             file_id = file.file_id
@@ -352,8 +352,8 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"")
-        await asyncio.sleep(60)
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>🔰IMPORTANT🔰</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>1 Hour</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+        await asyncio.sleep(3600)
         for x in filesarr:
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -430,14 +430,14 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("",quote=True)
-            await asyncio.sleep(60)
+            k = await msg.reply("<b><u>🔰IMPORTANT🔰</u></b>\n\nThis Movie File/Video will be deleted in <b><u>1 Hour</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+            await asyncio.sleep(3600)
             await msg.delete()
             
             return
         except:
             pass
-        return await message.reply('')
+        return await message.reply('No such file exist.')
     files = files_[0]
     title = '@filmytak  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
@@ -482,8 +482,8 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("",quote=True)
-    await asyncio.sleep(60)
+    k = await msg.reply("<b><u>🔰IMPORTANT🔰</u></b>\n\nThis Movie File/Video will be deleted in <b><u>1 Hour</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+    await asyncio.sleep(3600)
     await msg.delete()
     
     return   
