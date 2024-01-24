@@ -327,6 +327,7 @@ async def start(client, message):
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -394,6 +395,7 @@ async def start(client, message):
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -456,6 +458,7 @@ async def start(client, message):
         ]]
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
+            InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
