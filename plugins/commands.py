@@ -329,8 +329,9 @@ async def start(client, message):
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
-                    InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
-                    reply_markup = InlineKeyboardMarkup(buttons)
+                    reply_markup=InlineKeyboardMarkup(
+                    [InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/M0viesBoss")
+                    ]
                 )
                 return
             msg = await client.send_cached_media(
@@ -396,7 +397,6 @@ async def start(client, message):
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -459,7 +459,6 @@ async def start(client, message):
         ]]
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
-            InlineKeyboardButton('How To Verify', url=f'https://t.me/filmytak')
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
