@@ -326,7 +326,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>""""<b>HOW TO VERIFY : <a href='https://t.me/filmytak'>HOW  TO VERIFY</a></b>""",
+                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -393,7 +393,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>""""<b>HOW TO VERIFY : <a href='https://t.me/filmytak'>HOW  TO VERIFY</a></b>""",
+                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -455,7 +455,7 @@ async def start(client, message):
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>""""<b>HOW TO VERIFY : <a href='https://t.me/filmytak'>HOW  TO VERIFY</a></b>""",
+            text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
