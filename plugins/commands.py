@@ -330,7 +330,7 @@ async def start(client, message):
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                     reply_markup=InlineKeyboardMarkup(
-                    [InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/M0viesBoss")
+                    [InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/M0viesBoss"))
                     ]
                 )
                 return
