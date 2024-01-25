@@ -325,26 +325,11 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
-                from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
-btn_not_verified = [
-    [InlineKeyboardButton("You are not verified", callback_data="not_verified")]
-]
-
-btn_owner = [
-    [InlineKeyboardButton("Bot Owner", url="t.me/M0viesBoss")]
-]
-
-combined_btn = btn_not_verified + btn_owner
-
-await message.reply_text(
-    text="<b>You are not verified !\nKindly verify to continue !</b>",
-    protect_content=True,
-    reply_markup=InlineKeyboardMarkup(combined_btn)
-)
-
-               )
-                
+                await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b> <a href='https://t.me/filmytak>How To Verify</a></b>",
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                )
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
