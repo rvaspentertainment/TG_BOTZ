@@ -353,7 +353,7 @@ async def start(client, message):
             )
             filesarr.append(msg)
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b>@filmytak</b>")
-        await asyncio.sleep(3600)
+        await asyncio.sleep(21600)
         for x in filesarr:
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -431,7 +431,7 @@ async def start(client, message):
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
             k = await msg.reply("<b>@filmytak</b>",quote=True)
-            await asyncio.sleep(3600)
+            await asyncio.sleep(21600)
             await msg.delete()
             
             return
@@ -483,7 +483,7 @@ async def start(client, message):
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
     k = await msg.reply("<b>@filmytak</b>",quote=True)
-    await asyncio.sleep(3600)
+    await asyncio.sleep(21600)
     await msg.delete()
     
     return   
