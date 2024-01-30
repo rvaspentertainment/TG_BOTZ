@@ -326,7 +326,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
+                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -353,7 +353,7 @@ async def start(client, message):
             )
             filesarr.append(msg)
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b>@filmytak</b>")
-        await asyncio.sleep(21600)
+        await asyncio.sleep(10800)
         for x in filesarr:
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -393,7 +393,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
+                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -431,7 +431,7 @@ async def start(client, message):
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
             k = await msg.reply("<b>@filmytak</b>",quote=True)
-            await asyncio.sleep(21600)
+            await asyncio.sleep(10800)
             await msg.delete()
             
             return
@@ -455,7 +455,7 @@ async def start(client, message):
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/filmytak'>HOW TO VERIFY</a>👈</b>""",
+            text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -483,7 +483,7 @@ async def start(client, message):
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
     k = await msg.reply("<b>@filmytak</b>",quote=True)
-    await asyncio.sleep(21600)
+    await asyncio.sleep(10800)
     await msg.delete()
     
     return   
