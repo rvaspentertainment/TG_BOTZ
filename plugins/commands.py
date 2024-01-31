@@ -158,7 +158,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
+                                
                                 
                             ],[
                                 
@@ -180,7 +180,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
+                          
                           
                        ],[
                           
@@ -339,7 +339,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
+                      
                       
                    ],[
                       
@@ -405,7 +405,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
+                      
                       
                    ],[
                       
@@ -468,7 +468,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
+              
               
            ],[
               
