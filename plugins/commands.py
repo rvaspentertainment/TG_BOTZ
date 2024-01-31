@@ -158,7 +158,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                
+                                InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                                 
                             ],[
                                 
@@ -180,7 +180,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          
+                          InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                           
                        ],[
                           
@@ -304,7 +304,7 @@ async def start(client, message):
     elif data.startswith("all"):
         files = temp.GETALL.get(file_id)
         if not files:
-            return await message.reply('<b><i></b></i>')
+            return await message.reply('')
         filesarr = []
         for file in files:
             file_id = file.file_id
@@ -339,7 +339,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      
+                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                       
                    ],[
                       
@@ -405,7 +405,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      
+                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                       
                    ],[
                       
@@ -468,7 +468,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              
+              InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
               
            ],[
               
