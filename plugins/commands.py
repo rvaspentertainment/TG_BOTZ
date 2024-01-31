@@ -248,7 +248,7 @@ async def start(client, message):
         if str(message.from_user.id) != str(userid):
             return await message.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
-                protect_content=False
+                protect_content=True
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
@@ -260,7 +260,7 @@ async def start(client, message):
         else:
             return await message.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
-                protect_content=False
+                protect_content=True
             )
     if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
