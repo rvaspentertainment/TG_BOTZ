@@ -158,7 +158,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                
+                                InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                                 
                             ],[
                                 
@@ -180,7 +180,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          
+                          InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                           
                        ],[
                           
@@ -339,7 +339,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      
+                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                       
                    ],[
                       
@@ -353,7 +353,7 @@ async def start(client, message):
             )
             filesarr.append(msg)
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b>@Rasmalai_collection</b>")
-        await asyncio.sleep(10800)
+        await asyncio.sleep(900)
         for x in filesarr:
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
@@ -405,7 +405,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      
+                      InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
                       
                    ],[
                       
@@ -431,7 +431,7 @@ async def start(client, message):
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
             k = await msg.reply("<b>@Rasmalai_collection</b>",quote=True)
-            await asyncio.sleep(10800)
+            await asyncio.sleep(900)
             await msg.delete()
             
             return
@@ -468,7 +468,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              
+              InlineKeyboardButton('join now', url=f'https://t.me/Rasmalai_collection')
               
            ],[
               
@@ -483,7 +483,7 @@ async def start(client, message):
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
     k = await msg.reply("<b>@Rasmalai_collection</b>",quote=True)
-    await asyncio.sleep(10800)
+    await asyncio.sleep(900)
     await msg.delete()
     
     return   
