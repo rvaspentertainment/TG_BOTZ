@@ -89,7 +89,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            text="**'✨ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ✨' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -352,7 +352,7 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>@Rasmalai_collection</b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"")
         await asyncio.sleep(900)
         for x in filesarr:
             await x.delete()
@@ -430,7 +430,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("<b>@Rasmalai_collection</b>",quote=True)
+            k = await msg.reply("",quote=True)
             await asyncio.sleep(900)
             await msg.delete()
             
@@ -482,7 +482,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b>@Rasmalai_collection</b>",quote=True)
+    k = await msg.reply("",quote=True)
     await asyncio.sleep(900)
     await msg.delete()
     
