@@ -89,7 +89,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**'✨ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ✨' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            text="**'✨ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ✨' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the videos...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -253,7 +253,7 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, You are successfully verified ✅!\nNow you have unlimited access for all movies till today midnight.</b>",
+                text=f"<b>Hey {message.from_user.mention}, You are successfully refresh Token!\nNow you have unlimited access for videos till today midnight.</b>",
                 protect_content=True
             )
             await verify_user(client, userid, token)
@@ -323,10 +323,10 @@ async def start(client, message):
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
+                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -390,10 +390,10 @@ async def start(client, message):
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
+                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -452,10 +452,10 @@ async def start(client, message):
         f_caption = f"@Rasmalai_collection  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
-            InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+            InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO VERIFY</a>👈</b>""",
+            text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
