@@ -326,7 +326,7 @@ async def start(client, message):
                     InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
+                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/14'>HOW TO REFRESH TOKEN</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -393,7 +393,7 @@ async def start(client, message):
                     InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
+                    text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/14'>HOW TO REFRESH TOKEN</a>👈</b>""",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -455,7 +455,7 @@ async def start(client, message):
             InlineKeyboardButton("Click Here To refresh Token", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
-            text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/13'>HOW TO REFRESH TOKEN</a>👈</b>""",
+            text="<b>Your Ads token is expired, refresh your token and try again.\n Token Timeout: 12 hour </b>\n""""<b>👉<a href='https://t.me/HOW_TO_OPEN_TGLINKS/14'>HOW TO REFRESH TOKEN</a>👈</b>""",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
