@@ -150,7 +150,7 @@ async def start(client, message):
                 f_caption = f"{title}"
             try:
                 # Create the inline keyboard button with callback_data
-                await client.send_cached_media(
+                l = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -171,8 +171,9 @@ async def start(client, message):
                 )
             except FloodWait as e:
                 await asyncio.sleep(900)
+                await l.delete()
                 logger.warning(f"Floodwait of {900} sec.")
-                await client.send_cached_media(
+                l = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -194,7 +195,7 @@ async def start(client, message):
                 logger.warning(e, exc_info=True)
                 continue
             await asyncio.sleep(900) 
-        await sts.delete(900)
+            await l.delete()
         return
     
     elif data.split("-", 1)[0] == "DSTORE":
@@ -331,7 +332,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            msg = await client.send_cached_media(
+            l = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 caption=f_caption,
@@ -355,7 +356,7 @@ async def start(client, message):
         k = await client.send_message(chat_id = message.from_user.id, text=f"@Rasmalai_collection")
         await asyncio.sleep(900)
         for x in filesarr:
-            await x.delete(900)
+            await l.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return    
         
@@ -398,7 +399,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            msg = await client.send_cached_media(
+            l = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
@@ -432,7 +433,7 @@ async def start(client, message):
             ]]
             k = await msg.reply("@Rasmalai_collection",quote=True)
             await asyncio.sleep(900)
-            await msg.delete(900)
+            await l.delete()
             
             return
         except:
@@ -460,7 +461,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-    msg = await client.send_cached_media(
+    l = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
@@ -484,7 +485,7 @@ async def start(client, message):
     ]]
     k = await msg.reply("@Rasmalai_collection",quote=True)
     await asyncio.sleep(900)
-    await msg.delete(900)
+    await l.delete()
     
     return   
        
