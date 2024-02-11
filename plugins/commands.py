@@ -170,7 +170,7 @@ async def start(client, message):
                     )
                 )
             except FloodWait as e:
-                await asyncio.sleep(e.x)
+                await asyncio.sleep(900)
                 logger.warning(f"Floodwait of {e.x} sec.")
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
@@ -193,7 +193,7 @@ async def start(client, message):
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
-            await asyncio.sleep(1) 
+            await asyncio.sleep(900) 
         await sts.delete()
         return
     
@@ -223,7 +223,7 @@ async def start(client, message):
                 try:
                     await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
                 except FloodWait as e:
-                    await asyncio.sleep(e.x)
+                    await asyncio.sleep(900)
                     await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
                 except Exception as e:
                     logger.exception(e)
@@ -234,12 +234,12 @@ async def start(client, message):
                 try:
                     await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
                 except FloodWait as e:
-                    await asyncio.sleep(e.x)
+                    await asyncio.sleep(900)
                     await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
                 except Exception as e:
                     logger.exception(e)
                     continue
-            await asyncio.sleep(1) 
+            await asyncio.sleep(900) 
         return await sts.delete()
 
     elif data.split("-", 1)[0] == "verify":
@@ -430,7 +430,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("Rasmalai_collection",quote=True)
+            k = await msg.reply("@Rasmalai_collection",quote=True)
             await asyncio.sleep(900)
             await msg.delete()
             
@@ -482,7 +482,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("Rasmalai_collection",quote=True)
+    k = await msg.reply("@Rasmalai_collection",quote=True)
     await asyncio.sleep(900)
     await msg.delete()
     
