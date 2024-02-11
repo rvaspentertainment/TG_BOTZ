@@ -171,7 +171,7 @@ async def start(client, message):
                 )
             except FloodWait as e:
                 await asyncio.sleep(900)
-                logger.warning(f"Floodwait of {e.x} sec.")
+                logger.warning(f"Floodwait of {900} sec.")
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
