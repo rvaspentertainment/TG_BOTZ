@@ -194,7 +194,7 @@ async def start(client, message):
                 logger.warning(e, exc_info=True)
                 continue
             await asyncio.sleep(900) 
-        await sts.delete()
+        await sts.delete(900)
         return
     
     elif data.split("-", 1)[0] == "DSTORE":
@@ -240,7 +240,7 @@ async def start(client, message):
                     logger.exception(e)
                     continue
             await asyncio.sleep(900) 
-        return await sts.delete()
+        return await sts.delete(900)
 
     elif data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
@@ -355,7 +355,7 @@ async def start(client, message):
         k = await client.send_message(chat_id = message.from_user.id, text=f"@Rasmalai_collection")
         await asyncio.sleep(900)
         for x in filesarr:
-            await x.delete()
+            await x.delete(900)
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return    
         
@@ -432,7 +432,7 @@ async def start(client, message):
             ]]
             k = await msg.reply("@Rasmalai_collection",quote=True)
             await asyncio.sleep(900)
-            await msg.delete()
+            await msg.delete(900)
             
             return
         except:
@@ -484,7 +484,7 @@ async def start(client, message):
     ]]
     k = await msg.reply("@Rasmalai_collection",quote=True)
     await asyncio.sleep(900)
-    await msg.delete()
+    await msg.delete(900)
     
     return   
        
@@ -598,7 +598,7 @@ async def delete_all_index(bot, message):
 
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
-async def delete_all_index_confirm(bot, message):
+async def _all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('Piracy Is Crime')
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
