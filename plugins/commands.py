@@ -150,7 +150,7 @@ async def start(client, message):
                 f_caption = f"{title}"
             try:
                 # Create the inline keyboard button with callback_data
-                l = await client.send_cached_media(
+                await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -170,10 +170,9 @@ async def start(client, message):
                     )
                 )
             except FloodWait as e:
-                await asyncio.sleep(900)
-                await l.delete()
-                logger.warning(f"Floodwait of {900} sec.")
-                l = await client.send_cached_media(
+                await asyncio.sleep(e.x)
+                logger.warning(f"Floodwait of {e.x} sec.")
+                await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -194,8 +193,8 @@ async def start(client, message):
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
-            await asyncio.sleep(900) 
-            await l.delete()
+            await asyncio.sleep(1) 
+        await sts.delete()
         return
     
     elif data.split("-", 1)[0] == "DSTORE":
@@ -224,7 +223,7 @@ async def start(client, message):
                 try:
                     await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
                 except FloodWait as e:
-                    await asyncio.sleep(900)
+                    await asyncio.sleep(e.x)
                     await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
                 except Exception as e:
                     logger.exception(e)
@@ -235,13 +234,13 @@ async def start(client, message):
                 try:
                     await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
                 except FloodWait as e:
-                    await asyncio.sleep(900)
+                    await asyncio.sleep(e.x)
                     await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
                 except Exception as e:
                     logger.exception(e)
                     continue
-            await asyncio.sleep(900) 
-        return await sts.delete(900)
+            await asyncio.sleep(1) 
+        return await sts.delete()
 
     elif data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
@@ -332,7 +331,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            l = await client.send_cached_media(
+            msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 caption=f_caption,
@@ -356,7 +355,7 @@ async def start(client, message):
         k = await client.send_message(chat_id = message.from_user.id, text=f"@Rasmalai_collection")
         await asyncio.sleep(900)
         for x in filesarr:
-            await l.delete()
+            await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return    
         
@@ -399,7 +398,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            l = await client.send_cached_media(
+            msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
@@ -431,9 +430,9 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("@Rasmalai_collection",quote=True)
+            k = await msg.reply("Rasmalai_collection",quote=True)
             await asyncio.sleep(900)
-            await l.delete()
+            await msg.delete()
             
             return
         except:
@@ -461,7 +460,7 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-    l = await client.send_cached_media(
+    msg = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
@@ -483,9 +482,9 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("@Rasmalai_collection",quote=True)
+    k = await msg.reply("Rasmalai_collection",quote=True)
     await asyncio.sleep(900)
-    await l.delete()
+    await msg.delete()
     
     return   
        
@@ -599,7 +598,7 @@ async def delete_all_index(bot, message):
 
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
-async def _all_index_confirm(bot, message):
+async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('Piracy Is Crime')
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
